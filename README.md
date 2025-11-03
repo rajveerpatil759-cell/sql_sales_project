@@ -1,11 +1,11 @@
-# Retail Sales Analysis SQL Project
+# Superstore Sales Analysis SQL Project
 
 ## Project Overview
 
 **Project Title**:Superstore Sales Analysis  
 **Database**: project
 
-This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze retail sales data. The project involves setting up a retail sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
+This project is designed to demonstrate SQL skills and techniques typically used by data analysts to explore, clean, and analyze  sales data. The project involves setting up a  sales database, performing exploratory data analysis (EDA), and answering specific business questions through SQL queries. This project is ideal for those who are starting their journey in data analysis and want to build a solid foundation in SQL.
 
 ## Objectives
 
@@ -54,7 +54,26 @@ create table transcation_table(Order_ID varchar(30) not null ,
 							                 primary key (Order_ID ,product_id));
 ```
 
-### 2. Data Exploration & Cleaning
+### 2. Data Cleaning
 A. Check for Cleaned Duplicates
-
+B. Check for Cleaned Duplicates
+```sql
+SELECT COUNT(Order_ID, product_id) - COUNT(DISTINCT Order_ID, product_id) FROM transcation_table;
+SELECT COUNT(*) FROM transcation_table WHERE product_id IS NULL OR Customer_ID IS NULL;
+```
+### 2. Data Validation
+A. Find Sales without a Valid Product
+B. Find Sales without a Valid Customer
+C. Check for Nulls in Critical Dimension Columns
+D. Isolate Negative Sales (Returns/Cancellations)
+E. Check for Inconsistent Region Names
+F. Standardize Casing (If inconsistencies are found)
+```sql
+SELECT ft.Order_ID, ft.product_id FROM transcation_table AS ft LEFT JOIN product_table AS dp ON ft.product_id = dp.product_id dp.product_id IS NULL;
+SELECT ft.Order_ID, ft.Customer_ID FROM transcation_table AS ft LEFT JOIN customer_table AS dc ON ft.Customer_ID = dc.Customer_ID WHERE dc.Customer_ID IS NULL;
+SELECT DISTINCT Region, COUNT(*) FROM customer_table GROUP BY Region HAVING COUNT(*) > 1   ORDER BY 2 DESC;
+SELECT COUNT(*) AS Negative_Sales_Count, SUM(Sales) AS Total_Negative_Value FROM transcation_table WHERE Sales < 0;
+SELECT DISTINCT Region, COUNT(*) FROM customer_table GROUP BY Region HAVING COUNT(*) > 1   ORDER BY 2 DESC;
+UPDATE customer_table SET Region = INITCAP(Region) WHERE Region IS NOT NULL AND Region != INITCAP(Region);
+```
 
