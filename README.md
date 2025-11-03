@@ -63,6 +63,7 @@ SELECT COUNT(*) FROM transcation_table WHERE product_id IS NULL OR Customer_ID I
 ```
 ### 2. Data Validation
 **A. Find Sales without a Valid Product**
+
 **B. Find Sales without a Valid Customer**
 **C. Check for Nulls in Critical Dimension Columns**
 **D. Isolate Negative Sales (Returns/Cancellations)**
