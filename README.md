@@ -55,8 +55,8 @@ create table transcation_table(Order_ID varchar(30) not null ,
 ```
 
 ### 2. Data Cleaning
-A.** Check for Cleaned Duplicates**
-B.** Check for Cleaned Duplicates**
+1. ** Check for Cleaned Duplicates**
+2. ** Check for Cleaned Duplicates**
 ```sql
 SELECT COUNT(Order_ID, product_id) - COUNT(DISTINCT Order_ID, product_id) FROM transcation_table;
 SELECT COUNT(*) FROM transcation_table WHERE product_id IS NULL OR Customer_ID IS NULL;
