@@ -55,19 +55,19 @@ create table transcation_table(Order_ID varchar(30) not null ,
 ```
 
 ### 2. Data Cleaning
-A. Check for Cleaned Duplicates
-B. Check for Cleaned Duplicates
+**A. Check for Cleaned Duplicates**
+**B. Check for Cleaned Duplicates**
 ```sql
 SELECT COUNT(Order_ID, product_id) - COUNT(DISTINCT Order_ID, product_id) FROM transcation_table;
 SELECT COUNT(*) FROM transcation_table WHERE product_id IS NULL OR Customer_ID IS NULL;
 ```
 ### 2. Data Validation
-A. Find Sales without a Valid Product
-B. Find Sales without a Valid Customer
-C. Check for Nulls in Critical Dimension Columns
-D. Isolate Negative Sales (Returns/Cancellations)
-E. Check for Inconsistent Region Names
-F. Standardize Casing (If inconsistencies are found)
+**A. Find Sales without a Valid Product**
+**B. Find Sales without a Valid Customer**
+**C. Check for Nulls in Critical Dimension Columns**
+**D. Isolate Negative Sales (Returns/Cancellations)**
+**E. Check for Inconsistent Region Names**
+**F. Standardize Casing (If inconsistencies are found)**
 ```sql
 SELECT ft.Order_ID, ft.product_id FROM transcation_table AS ft LEFT JOIN product_table AS dp ON ft.product_id = dp.product_id dp.product_id IS NULL;
 SELECT ft.Order_ID, ft.Customer_ID FROM transcation_table AS ft LEFT JOIN customer_table AS dc ON ft.Customer_ID = dc.Customer_ID WHERE dc.Customer_ID IS NULL;
