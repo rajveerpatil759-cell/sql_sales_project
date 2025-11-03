@@ -62,13 +62,12 @@ SELECT COUNT(Order_ID, product_id) - COUNT(DISTINCT Order_ID, product_id) FROM t
 SELECT COUNT(*) FROM transcation_table WHERE product_id IS NULL OR Customer_ID IS NULL;
 ```
 ### 2. Data Validation
-**Find Sales without a Valid Product**
-
-1.  Find Sales without a Valid Customer
-2.  Check for Nulls in Critical Dimension Columns
-3.  Isolate Negative Sales (Returns/Cancellations)
-4.  Check for Inconsistent Region Names
-5. Standardize Casing (If inconsistencies are found)
+1. Find Sales without a Valid Product
+2. Find Sales without a Valid Customer
+3. Check for Nulls in Critical Dimension Columns
+4. Isolate Negative Sales (Returns/Cancellations)
+5. Check for Inconsistent Region Names
+6. Standardize Casing (If inconsistencies are found)
 ```sql
 SELECT ft.Order_ID, ft.product_id FROM transcation_table AS ft LEFT JOIN product_table AS dp ON ft.product_id = dp.product_id dp.product_id IS NULL;
 SELECT ft.Order_ID, ft.Customer_ID FROM transcation_table AS ft LEFT JOIN customer_table AS dc ON ft.Customer_ID = dc.Customer_ID WHERE dc.Customer_ID IS NULL;
