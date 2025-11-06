@@ -126,6 +126,7 @@ ORDER BY
 ```
 
 3.**Write a Query to Find out Regional Sales Performance**
+```sql
 SELECT
     dc.Region,
     SUM(ft.Sales) AS Total_Regional_Sales
@@ -137,7 +138,8 @@ GROUP BY
     dc.Region
 ORDER BY
     Total_Regional_Sales DESC;
-	```
+```
+
 4. **Write a Query  to find Sales from Top 2 Performing Regions**
 SELECT
     dc.Region,
