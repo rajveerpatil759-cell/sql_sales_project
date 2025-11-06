@@ -141,6 +141,7 @@ ORDER BY
 ```
 
 4. **Write a Query  to find Sales from Top 2 Performing Regions**
+```sql
 SELECT
     dc.Region,
     SUM(ft.Sales) AS Top_Regional_Sales
