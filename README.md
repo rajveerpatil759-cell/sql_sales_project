@@ -14,7 +14,7 @@ This project is designed to demonstrate SQL skills and techniques typically used
 3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
 4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
 
-5. ## Project Structure
+ ## Project Structure
 
 ### 1. Database Setup
 
