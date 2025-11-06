@@ -78,6 +78,7 @@ UPDATE customer_table SET Region = INITCAP(Region) WHERE Region IS NOT NULL AND 
 ```
 ### 3. Data Analysis & Findings
 The following SQL queries were developed to answer specific business questions:
+
 1.**Write a Query find top selling products by total sales**
 ```sql
 SELECT
