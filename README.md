@@ -168,15 +168,22 @@ GROUP BY
     dc.Region
 ORDER BY
     Top_Regional_Sales DESC;
-	```
+```
+
 
 5.**To make the query faster we will add indexes to the columns in the largest table (transcation_table) that are used for joining(your Foreign Keys) and filtering**
 1. Index for Joining to Product Table
-```sqlCREATE INDEX idx_fk_product_id ON transcation_table (product_id);```
+```sql
+CREATE INDEX idx_fk_product_id ON transcation_table (product_id);
+```
 2. Index for Joining to Customer Table
-```sqlCREATE INDEX idx_fk_customer_id ON transcation_table (Customer_ID);```
-3. Index for Filtering/Grouping by Date
-```sqlCREATE INDEX idx_order_date ON transcation_table (Order_Date);```
+```sql
+CREATE INDEX idx_fk_customer_id ON transcation_table (Customer_ID);
+```
+4. Index for Filtering/Grouping by Date
+```sql
+CREATE INDEX idx_order_date ON transcation_table (Order_Date);
+```
 
  6.**To see cost of operation using EXPLAIN ANALYZE command.**
 ```sql
