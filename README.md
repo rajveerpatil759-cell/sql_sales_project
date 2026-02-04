@@ -20,8 +20,8 @@ This project analyzes over 9,000 sales records to solve critical business proble
 
 - **Database Creation**: The project starts by creating a database named `project`.
 - **Table Creation**: A table named `customer_table` is created to store the customer data. The table structure includes columns for Customer_ID ,Customer_Name ,Segment ,City ,State ,Region .
-                      A table named `product_table` is created to store the product data.The table structure includes columns for ProductID,Category	,Sub-Category,	Product Name.
-                       A table named `transcation_table` is created to store the transaction data.The table structure includes columns for Order ID	,Order Date	,Customer ID	,Product ID,Sales.
+                      A table named `product_table` is created to store the product data.The table structure includes columns for ProductID,Category, Sub-Category,	Product Name.
+                       A table named `transcation_table` is created to store the transaction data.The table structure includes columns for Order ID	,Order Date	,Customer ID, Product ID,Sales.
                      
 
 
