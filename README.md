@@ -21,7 +21,7 @@ This project analyzes over 9,000 sales records to solve critical business proble
 - **Database Creation**: The project starts by creating a database named `project`.
 - **Table Creation**: 1. A table named `customer_table` is created to store the customer data. The table structure includes columns for Customer_ID ,Customer_Name ,Segment ,City ,State ,Region .
                       2. A table named `product_table` is created to store the product data.The table structure includes columns for ProductID,Category, Sub-Category,	Product Name.
-                       3. A table named `transcation_table` is created to store the transaction data.The table structure includes columns for Order ID	,Order Date	,Customer ID, Product ID,Sales.
+                      3. A table named `transcation_table` is created to store the transaction data.The table structure includes columns for Order ID	,Order Date	,Customer ID, Product ID,Sales.
                      
 
 
@@ -56,7 +56,7 @@ create table transcation_table(Order_ID varchar(30) not null ,
 
 ### 2. Data Cleaning
 1. Check for Cleaned Duplicates
-2.  Check for Cleaned Duplicates
+2. Check for Cleaned Duplicates
 ```sql
 SELECT COUNT(Order_ID, product_id) - COUNT(DISTINCT Order_ID, product_id) FROM transcation_table;
 SELECT COUNT(*) FROM transcation_table WHERE product_id IS NULL OR Customer_ID IS NULL;
