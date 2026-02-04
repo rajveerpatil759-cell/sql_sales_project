@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-**Project Title**:Superstore Sales Analysis  
+**Project Title**: Superstore Sales Analysis  
 **Tool**: SQL(PostgreSQL)
 
 This project analyzes over 9,000 sales records to solve critical business problems such as declining category sales, customer churn, and regional underperformance. Beyond basic analysis, this project focuses on **database optimization** (indexing) and **advanced SQL techniques** (Window Functions, CTEs) to derive actionable insights for the sales strategy team.
