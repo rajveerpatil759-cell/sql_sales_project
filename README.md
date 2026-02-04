@@ -20,7 +20,7 @@ This project analyzes over 9,000 sales records to solve critical business proble
 3. **Exploratory Data Analysis (EDA)**: Perform basic exploratory data analysis to understand the dataset.
 4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
 
-## 📂 Entity Relationship Diagram (ERD)
+##  Entity Relationship Diagram (ERD)
 ```mermaid
 erDiagram
     CUSTOMER ||--o{ TRANSACTION : places
@@ -39,11 +39,11 @@ erDiagram
     TRANSACTION {
         string Order_ID PK
         date Order_Date
-		string Customer_ID FK
+        string Customer_ID FK
         string Product_ID FK
         numeric Sales
     }
-```mermaid
+
 
 ## Project Structure
 ###  SQL Analysis Breakdown
