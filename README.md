@@ -43,6 +43,7 @@ erDiagram
         string Product_ID FK
         numeric Sales
     }
+```mermaid
 
 ## Project Structure
 ###  SQL Analysis Breakdown
