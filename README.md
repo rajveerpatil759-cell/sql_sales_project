@@ -19,9 +19,9 @@ This project analyzes over 9,000 sales records to solve critical business proble
 ### 1. Database Setup
 
 - **Database Creation**: The project starts by creating a database named `project`.
-- **Table Creation**: A table named `customer_table` is created to store the customer data. The table structure includes columns for Customer_ID ,Customer_Name ,Segment ,City ,State ,Region .
-                      A table named `product_table` is created to store the product data.The table structure includes columns for ProductID,Category, Sub-Category,	Product Name.
-                       A table named `transcation_table` is created to store the transaction data.The table structure includes columns for Order ID	,Order Date	,Customer ID, Product ID,Sales.
+- **Table Creation**: 1. A table named `customer_table` is created to store the customer data. The table structure includes columns for Customer_ID ,Customer_Name ,Segment ,City ,State ,Region .
+                      2. A table named `product_table` is created to store the product data.The table structure includes columns for ProductID,Category, Sub-Category,	Product Name.
+                       3. A table named `transcation_table` is created to store the transaction data.The table structure includes columns for Order ID	,Order Date	,Customer ID, Product ID,Sales.
                      
 
 
@@ -29,29 +29,29 @@ This project analyzes over 9,000 sales records to solve critical business proble
 ```sql
 create table customer_table(Customer_ID varchar(30) primary key,
                             Customer_Name varchar(30),
-							              Segment varchar(30),
-							              City varchar(30),
-							              State varchar(30),
-							              Region varchar(30));
+                            Segment varchar(30),
+                            City varchar(30),
+                            State varchar(30),
+                            Region varchar(30));
 ```
 --product table
 ```sql
 create table product_table(product_id varchar(30) primary key,
                            Category varchar(30),
-							             Sub_Category varchar(30),
-							             Product_Name varchar(130));
+                           Sub_Category varchar(30),
+                           Product_Name varchar(130));
 ```
 
 --transaction table 
 ```sql
 create table transcation_table(Order_ID varchar(30) not null ,
                                Order_Date date,
-							                 Customer_ID varchar(30),
-							                 product_id varchar(30) not null ,
-							                 Sales NUMERIC(10,2),
-							                 CONSTRAINT fk_product FOREIGN KEY (product_id) REFERENCES product_table(product_id),
+                               Customer_ID varchar(30),
+                               product_id varchar(30) not null ,
+                               Sales NUMERIC(10,2),
+                               CONSTRAINT fk_product FOREIGN KEY (product_id) REFERENCES product_table(product_id),
                                CONSTRAINT fk_customer FOREIGN KEY (Customer_ID) REFERENCES customer_table(Customer_ID),
-							                 primary key (Order_ID ,product_id));
+                               primary key (Order_ID ,product_id));
 ```
 
 ### 2. Data Cleaning
