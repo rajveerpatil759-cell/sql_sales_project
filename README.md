@@ -319,10 +319,12 @@ ORDER BY
 2. Geographical Imbalance : Sales performance is geographically concentrated
 3. Time-Series Volatility : Monthly sales exhibit significant volatility, with certain periods showing high Month-over-Month (MoM) growth  and others indicating retraction. The Cumulative Sales  trend confirms steady long-term growth despite this monthly fluctuation.
 
-## Reports
-1. Executive Performance Dashboard Data: Provides the Total Sales aggregated by Region and Category
-2. MoM Growth & Trend Report: A time-series output showing the Month-over-Month Growth Rate and Cumulative Sales over the entire period, serving as the basis for budget forecasting and seasonality analysis.
-3. Customer Segmentation Report: A segmented list of customers, tagged by their High/Medium/Low-Value tier , along with their Average Days Between Orders  to inform targeted marketing campaigns.
+##  Key Insights 
+Based on the SQL analysis, the following trends were identified:
+
+1.  **Pareto Principle in Product Sales:** A small percentage of "High-Value" products drive the majority of revenue, suggesting a need to optimize inventory for top performers.
+2.  **Regional Volatility:** While overall sales are growing, specific regions show inconsistent Month-over-Month growth, indicating potential supply chain or marketing issues in those areas.
+3.  **Customer Segmentation:** The analysis successfully segmented customers into High/Medium/Low value tiers based on Average Order Value (AOV), enabling targeted loyalty campaigns.
 
 ## Conclusion
 This project serves as a comprehensive introduction to SQL for data analysts, covering database setup, data cleaning, exploratory data analysis, and business-driven SQL queries. The findings from this project can help drive business decisions by understanding sales patterns, customer behavior, and product performance.
