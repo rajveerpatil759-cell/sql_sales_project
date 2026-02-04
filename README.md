@@ -7,6 +7,12 @@
 
 This project analyzes over 9,000 sales records to solve critical business problems such as declining category sales, customer churn, and regional underperformance. Beyond basic analysis, this project focuses on **database optimization** (indexing) and **advanced SQL techniques** (Window Functions, CTEs) to derive actionable insights for the sales strategy team.
 
+## 🛠️ Key Skills Demonstrated
+* **Advanced SQL:** Window Functions (`RANK`, `LAG`, `OVER`), CTEs, Aggregations.
+* **Database Performance:** Indexing, `EXPLAIN ANALYZE` for query cost estimation.
+* **Data Cleaning:** Handling NULLs, standardizing string formats (`INITCAP`), and validating foreign keys.
+* **Business Intelligence:** Churn analysis, Month-over-Month (MoM) growth, and Customer Segmentation (RFM analysis).
+  
 ## Objectives
 
 1. **Set up a sales database**: Create and populate a  sales database with the provided sales data.
@@ -15,8 +21,8 @@ This project analyzes over 9,000 sales records to solve critical business proble
 4. **Business Analysis**: Use SQL to answer specific business questions and derive insights from the sales data.
 
  ## Project Structure
-
-### 1. Database Setup
+###  SQL Analysis Breakdown
+### 1. Database Setup & Initialization
 
 - **Database Creation**: The project starts by creating a database named `project`.
 - **Table Creation**: 1. A table named `customer_table` is created to store the customer data. The table structure includes columns for Customer_ID ,Customer_Name ,Segment ,City ,State ,Region .
@@ -61,6 +67,7 @@ create table transcation_table(Order_ID varchar(30) not null ,
 SELECT COUNT(Order_ID, product_id) - COUNT(DISTINCT Order_ID, product_id) FROM transcation_table;
 SELECT COUNT(*) FROM transcation_table WHERE product_id IS NULL OR Customer_ID IS NULL;
 ```
+
 ### 2. Data Validation
 1. Find Sales without a Valid Product
 2. Find Sales without a Valid Customer
@@ -76,8 +83,9 @@ SELECT COUNT(*) AS Negative_Sales_Count, SUM(Sales) AS Total_Negative_Value FROM
 SELECT DISTINCT Region, COUNT(*) FROM customer_table GROUP BY Region HAVING COUNT(*) > 1   ORDER BY 2 DESC;
 UPDATE customer_table SET Region = INITCAP(Region) WHERE Region IS NOT NULL AND Region != INITCAP(Region);
 ```
-### 3. Data Analysis & Findings
-The following SQL queries were developed to answer specific business questions:
+
+### 3. Business Analysis Queries
+Below are the SQL queries used to solve specific business questions.
 
 1.**Write a Query find top selling products by total sales**
 ```sql
