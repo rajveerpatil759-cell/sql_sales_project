@@ -42,7 +42,7 @@ erDiagram
         string Customer_ID FK
         string Product_ID FK
         numeric Sales
-    }
+    } ```
 
 
 ## Project Structure
