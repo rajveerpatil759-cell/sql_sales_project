@@ -301,9 +301,9 @@ psql -d superstore -f sales.sql
 ## 👤 Author
 
 **Rajveer**
-- 📧 [your email]
-- 💼 [your LinkedIn]
-- 🐙 [your GitHub]
+- 📧 [rajveerpatil759@gmail.com]
+- 💼 [LinkedIn](https:www.linkedin.com/in/rajveerpatil019)
+
 
 ---
 
