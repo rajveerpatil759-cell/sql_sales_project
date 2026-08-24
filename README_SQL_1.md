@@ -1,10 +1,10 @@
-# 🗄️ Superstore Sales — SQL Analysis
+#  Superstore Sales — SQL Analysis
 
 > End-to-end SQL project covering database design, data engineering, and 27 business-driven queries on 4 years of US retail superstore data.
 
 ---
 
-## 📌 Project Overview
+##  Project Overview
 
 **Project Title:** Superstore Sales SQL Analysis
 **Tool:** SQL (PostgreSQL)
@@ -12,13 +12,13 @@
 This project builds a complete PostgreSQL database for the Superstore Sales dataset (2014–2017) and answers 27 real business questions using advanced SQL techniques. The goal was to go beyond basic queries and demonstrate production-ready SQL skills including window functions, CTEs, stored functions, views, and database optimization.
 
 **Tools Used:**
-- 🗄️ PostgreSQL — database engine
-- 🐍 Python (pandas) — data cleaning and feature engineering
-- 🐙 GitHub — version control
+-  PostgreSQL — database engine
+-  Python (pandas) — data cleaning and feature engineering
+-  GitHub — version control
 
 ---
 
-## 🔑 Key Skills Demonstrated
+##  Key Skills Demonstrated
 
 - **Advanced SQL:** Window Functions (`RANK`, `LAG`, `SUM OVER`, `PARTITION BY`), CTEs, Aggregations
 - **Database Design:** Normalization, Foreign Keys, Composite Primary Keys, CHECK Constraints
@@ -29,7 +29,7 @@ This project builds a complete PostgreSQL database for the Superstore Sales data
 
 ---
 
-## 📂 Repository Structure
+##  Repository Structure
 
 ```
 superstore-sql/
@@ -45,7 +45,7 @@ superstore-sql/
 
 ---
 
-## 📊 Dataset Overview
+##  Dataset Overview
 
 | Metric | Value |
 |--------|-------|
@@ -65,7 +65,7 @@ superstore-sql/
 
 ---
 
-## 🗺️ Entity Relationship Diagram (ERD)
+##  Entity Relationship Diagram (ERD)
 
 ```mermaid
 erDiagram
@@ -119,7 +119,7 @@ erDiagram
 
 ---
 
-## 🔧 Data Engineering
+##  Data Engineering
 
 Six derived columns were engineered in Python before loading into SQL:
 
@@ -134,7 +134,7 @@ Six derived columns were engineered in Python before loading into SQL:
 
 ---
 
-## 🏗️ Database Design
+##  Database Design
 
 ### Schema
 - **3 normalized tables** with primary and foreign key constraints
@@ -180,7 +180,7 @@ LANGUAGE plpgsql
 
 ---
 
-## 📋 Business Queries — 27 Questions Across 6 Sections
+##  Business Queries — 27 Questions Across 6 Sections
 
 ### Section 1 — Executive Overview (Q1–Q3)
 | Query | Business Question |
@@ -235,7 +235,7 @@ LANGUAGE plpgsql
 
 ---
 
-## 🔑 SQL Techniques Demonstrated
+##  SQL Techniques Demonstrated
 
 | Technique | Used In |
 |-----------|---------|
@@ -255,7 +255,7 @@ LANGUAGE plpgsql
 
 ---
 
-## 🔑 Key Business Insights
+##  Key Business Insights
 
 **1. Discounting is the #1 profit killer**
 - No-discount orders earn **29.5% margin**
@@ -282,7 +282,7 @@ LANGUAGE plpgsql
 
 ---
 
-## 🚀 How to Run
+##  How to Run
 
 1. Install PostgreSQL
 2. Create a new database:
@@ -298,11 +298,11 @@ psql -d superstore -f sales.sql
 
 ---
 
-## 👤 Author
+##  Author
 
 **Rajveer**
-- 📧 [rajveerpatil759@gmail.com]
-- 💼 [LinkedIn](https:www.linkedin.com/in/rajveerpatil019)
+-  [rajveerpatil759@gmail.com]
+-  [LinkedIn](https:www.linkedin.com/in/rajveerpatil019)
 
 
 ---
