@@ -302,7 +302,7 @@ psql -d superstore -f sales.sql
 
 **Rajveer**
 -  [rajveerpatil759@gmail.com]
--  [LinkedIn](https:www.linkedin.com/in/rajveerpatil019)
+-  [LinkedIn](https://www.linkedin.com/in/rajveerpatil019)
 
 
 ---
